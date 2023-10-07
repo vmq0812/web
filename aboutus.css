@@ -1,0 +1,40 @@
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 250px;
+    height:fit-content;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color:#e40985;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    max-width: 700px;
+    margin-top: 50px;
+}
+p {
+    text-align: justify;
+    margin-bottom: 10px; 
+    line-height: 1.5;
+}
+

@@ -1,0 +1,215 @@
+/* Reset some default styles for consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style header */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 1200px;
+    height: 45px;
+    background-color: #ecdddd;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(214, 207, 207, 0.351);
+    z-index: 1000;
+}
+.logo h1 a {
+    text-decoration: none; /* Loại bỏ đường gạch chân */
+    color: inherit; /* Sử dụng màu chữ mặc định của phần tử cha (kế thừa màu) */
+}
+
+/* Style navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff66cc;
+}
+nav ul li a.active {
+    color: rgb(255, 49, 159); /* Đổi màu sắc tùy ý */
+}
+
+/* Style logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    color: #FF3399;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS cho slider-container */
+.slider-container {
+    position: relative;
+}
+
+/* CSS cho slider-content */
+.slider-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CSS cho slide */
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* CSS cho call-to-action */
+.call-to-action {
+    position: absolute;
+    top: 50%;
+    right: 150px;
+    left:710px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.call-to-action::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: -50px;
+    width: 157%; 
+    height: 140%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền tối */
+    z-index: -1; /* Đẩy lớp màu tối xuống dưới */
+}
+.call-to-action-content h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.call-to-action-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+/* CSS cho register-button */
+.register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fa74cd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #faa2bf;
+}
+/* CSS cho slide 2 */
+.slide2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* CSS cho slide2-content */
+.slide2-content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Thêm phần "Các nguồn thông tin đáng tin cậy" */
+.reliable-sources {
+    background-color: #f5f5f5; /* Màu xám nhạt */
+    padding: 20px;
+    text-align: center;
+}
+
+.reliable-sources h2 {
+    padding-top: 30px;
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #333;
+}
+
+.reliable-sources p {
+    font-size: 16px;
+    color: #555;
+}
+.img1 img {
+    width: 200px;
+    height: auto;
+}
+.img2 img {
+    margin-top: -40px;
+    width: 200px;
+    height: auto;
+}
+.img3 img {
+    width: 200px;
+    height: auto; 
+}
+.img4 img {
+    width: 300px;
+    height: auto;   
+}
+.img-con {
+    display: flex;
+    justify-content: center;
+    margin-left: 80px;
+
+}
+.reliable-sources .img-con div {
+    display: inline-block; 
+    margin-right: 50px; 
+    margin-top: 40px;
+    flex: 1;
+    text-align: center;
+}
