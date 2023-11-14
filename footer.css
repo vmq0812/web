@@ -1,11 +1,9 @@
-/* footer.css */
-/* Thay đổi màu nền của footer */
+
 footer {
     background-color: #3f3f3f;
     padding: 20px 0;
 }
 
-/* Tùy chỉnh kiểu chữ và màu chữ trong footer */
 .footer-content {
     display: flex;
     width: 100%;

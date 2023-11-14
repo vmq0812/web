@@ -1,6 +1,6 @@
 <?php
 if (!isset($current_page)) {
-    $current_page = ''; // Gán giá trị mặc định cho biến $current_page nếu chưa được định nghĩa
+    $current_page = ''; 
 }
 ?>
 <!DOCTYPE html>
@@ -21,9 +21,11 @@ if (!isset($current_page)) {
     <nav>
         <ul>
             <li><a href="cattype.php" <?php if ($current_page === 'cattype') echo 'class="active"'; ?>>Giống Mèo & Đặc Điểm</a></li>
-            <li><a href="blog.php" <?php if ($current_page === 'blog') echo 'class="active"'; ?>>Blog</a></li>
+            <li><a href="blog.php" <?php if ($current_page === 'blog') echo 'class="active"'; ?>>Bài Viết</a></li>
+            <li><a href="message.php"<?php if ($current_page === 'message') echo 'class="active"'; ?>>Tư Vấn</a></li>
             <li><a href="aboutus.php" <?php if ($current_page === 'aboutus') echo 'class="active"'; ?>>Về Chúng Tôi</a></li>
             <li><a href="userlogin.php">Đăng Nhập</a></li>
+
         </ul>
     </nav>
 </header>

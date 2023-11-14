@@ -36,40 +36,30 @@ include 'header.php';
             </ul>
         </div>
         <div class="acticle-container">
+            <h3>Bài viết mới nhất</h3>
             <div class="article">
-                <span class="hashtag">#Fun</span>
-                <h2>Tiêu đề bài báo 1</h2>
-                    <p>Đây là đoạn ngắn nội dung của bài báo 1.</p>
-                    <p class="author">Tác giả: MinhQuan</p>
-                    <p class="date">Ngày đăng: 06/10/2023</p>
+                <img src="cattype/aicap.webp" alt="Article 1" style="width:100%">
+                <div class="content">
+                    <h2>Article 1</h2>
+                    <p>This is a summary of article 1...</p>
+                    <p>Date: 1st January 2021</p>
+                </div>
             </div>
             <div class="article">
-                <span class="hashtag">#Fun</span>
-                    <h2>Tiêu đề bài báo 1</h2>
-                        <p>Đây là đoạn ngắn nội dung của bài báo 1.</p>
-                        <p class="author">Tác giả: MinhQuan</p>
-                        <p class="date">Ngày đăng: 06/10/2023</p>
+                <img src="cattype/chartreux.webp" alt="Article 2" style="width:100%">
+                <div class="content">
+                    <h2>Article 2</h2>
+                    <p>This is a summary of article 2...</p>
+                    <p>Date: 2nd January 2021</p>
+                </div>
             </div>
             <div class="article">
-                <span class="hashtag">#Fun</span>
-                    <h2>Tiêu đề bài báo 1</h2>
-                        <p>Đây là đoạn ngắn nội dung của bài báo 1.</p>
-                        <p class="author">Tác giả: MinhQuan</p>
-                        <p class="date">Ngày đăng: 06/10/2023</p>
-            </div>
-            <div class="article">
-                <span class="hashtag">#Fun</span>
-                    <h2>Tiêu đề bài báo 1</h2>
-                        <p>Đây là đoạn ngắn nội dung của bài báo 1.</p>
-                        <p class="author">Tác giả: MinhQuan</p>
-                        <p class="date">Ngày đăng: 06/10/2023</p>
-            </div>
-            <div class="article">
-                <span class="hashtag">#Fun</span>
-                    <h2>Tiêu đề bài báo 1</h2>
-                        <p>Đây là đoạn ngắn nội dung của bài báo 1.</p>
-                        <p class="author">Tác giả: MinhQuan</p>
-                        <p class="date">Ngày đăng: 06/10/2023</p>
+                <img src="cattype/exotic.webp" alt="Article 3" style="width:100%">
+                <div class="content">
+                    <h2>Article 3</h2>
+                    <p>This is a summary of article 3...</p>
+                    <p>Date: 3rd January 2021</p>
+                </div>
             </div>
         </div>
     </div>

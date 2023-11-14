@@ -35,6 +35,131 @@
     </div>
 </div>
 
+<div class="top-news-container"">
+    <div class="news-heading">
+        <h1>Bài viết nổi bật</h1>
+    </div>
+    <div class="news-section">
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian:</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+    </div>
+</div>
+<div class="hastag-news">
+    <div class="box">
+        <h1 class="ft">#HASTAG1</h1>
+    </div>
+    <div class="news-section">
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian:</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+    </div>
+</div>
+<div class="hastag-news">
+    <div class="box">
+        <h1 class="ft">#HASTAG2</h1>
+    </div>
+    <div class="news-section">
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian:</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+    </div>
+</div>
+<div class="hastag-news">
+    <div class="box">
+        <h1 class="ft">#HASTAG3</h1>
+    </div>
+    <div class="news-section">
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+        <div class="news-article">
+            <img src="https://via.placeholder.com/150" alt="Image placeholder">
+            <h2>Tiêu đề bài viết 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Tác giả:</p>
+            <p>Thời gian:</p>
+            <a href="#">Đọc thêm</a>
+        </div>
+    </div>
+</div>
+
 <main>
 
 </main>

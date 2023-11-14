@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+ font-family: Arial, sans-serif;
+}
+
+.articles {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.article {
+ margin: 10px;
+ padding: 5px;
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ transition: 0.3s;
+ width: 10%;
+ text-align: center;
+}
+
+.article:hover {
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+float: left;
+max-width: 100%;
+height: auto;
+max-width: 33%; /* Giữ cho ảnh không lớn hơn 2/3 kích thước của phần tử cha */
+height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
+}
+h2,p {
+  text-align: left;
+  margin-left: 180px;
+}
+  </style>
+</head>
+<body>
+
+<div class="articles">
+ <div class="article">
+    <img src="cattype/aicap.webp" alt="Article 1" style="width:100%">
+    <h2>Article 1</h2>
+    <p>This is a summary of article 1...</p>
+    <p>Date: 1st January 2021</p>
+ </div>
+
+ <div class="article">
+    <img src="cattype/chartreux.webp" alt="Article 2" style="width:100%">
+    <h2>Article 2</h2>
+    <p>This is a summary of article 2...</p>
+    <p>Date: 2nd January 2021</p>
+ </div>
+
+ <div class="article">
+    <img src="cattype/exotic.webp" alt="Article 3" style="width:100%">
+    <h2>Article 3</h2>
+    <p>This is a summary of article 3...</p>
+    <p>Date: 3rd January 2021</p>
+ </div>
+</div>
+
+</body>
+</html>
