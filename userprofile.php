@@ -1,48 +1,34 @@
 <?php
-// Include file kết nối đến cơ sở dữ liệu
-include 'conn.php';
+$conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
 
-// Kiểm tra xem người dùng đã đăng nhập hay chưa (đây chỉ là ví dụ đơn giản, bạn cần xác thực đăng nhập theo cách an toàn hơn trong ứng dụng thực tế)
-$logged_in = true; // Điều này cần được xác định dựa trên trạng thái đăng nhập thực tế
+session_start();
 
-if ($logged_in) {
-    // Lấy thông tin của người dùng từ cơ sở dữ liệu
-    $user_id = 1; // Đây là ví dụ, bạn cần thay đổi giá trị này dựa trên đăng nhập của người dùng
-    $stmt = $conn->prepare("SELECT id, name, email FROM users WHERE id = ?");
-    $stmt->bind_param("i", $user_id);
-    $stmt->execute();
-    $stmt->bind_result($id, $name, $email);
-    
-    // Kiểm tra xem có kết quả hay không
-    if ($stmt->fetch()) {
-        // Hiển thị thông tin cá nhân
-        echo "ID: " . $id . "<br>";
-        echo "Tên: " . $name . "<br>";
-        echo "Email: " . $email . "<br>";
-        
-        // Nút chỉnh sửa thông tin cá nhân
-        echo '<form action="process_update_profile.php" method="post">';
-        echo '  <label for="newName">Tên mới:</label>';
-        echo '  <input type="text" id="newName" name="newName"><br>';
-        echo '  <label for="newEmail">Email mới:</label>';
-        echo '  <input type="text" id="newEmail" name="newEmail"><br>';
-        echo '  <input type="submit" value="Lưu">';
-        echo '</form>';
-    } else {
-        echo "Không tìm thấy thông tin cá nhân cho người dùng này.";
-    }
-    
-    $stmt->close();
-} else {
-    echo "Vui lòng đăng nhập để xem thông tin cá nhân.";
+// Kiểm tra xem người dùng đã đăng nhập chưa
+if (!isset($_SESSION['username'])) {
+    header('location: userlogin.php');
+    exit();
 }
 
-// Đóng kết nối đến cơ sở dữ liệu (nếu cần)
-$conn->close();
+// Lấy thông tin người dùng từ session
+$username = $_SESSION['username'];
+
+$per = $_SESSION['per'];
+
+
+if (isset($_GET['user_id'])) {
+    $user_id = $_GET['user_id'];
+}
+
+$sql = "SELECT* FROM user WHERE user_id = $user_id";
+
+$result = mysqli_query($conn, $sql);
+$rows = mysqli_fetch_array($result);
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
@@ -50,26 +36,38 @@ $conn->close();
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <img src="image/paw.png" alt="hội yêu mèo logo">
-            <h1>MeowWisdom</h1>
-        </div>
-    </header>
+    <!-- ... -->
+
 
     <div class="profile">
+
+
         <h2>Tài khoản cá nhân</h2>
         <div class="avatar-container">
             <img id="avatar" src="https://via.placeholder.com/150" alt="avatar">
         </div>
-        <p><strong>Tên:</strong> </p>
-        <p><strong>Email:</strong> </p>
-        <p><strong>SĐT:</strong> </p>
-        <button onclick="editProfile()">chỉnh sửa thông tin </button>
+        <p><strong>Họ tên:</strong> <?= $rows['Fullname'] ?></p>
+        <p><strong>Tên đăng nhập:</strong> <?php echo $username; ?></p>
+        <!-- Hiển thị các thông tin khác của người dùng nếu có -->
+        <p><strong>Email: </strong><?= $rows['Email'] ?> </p>
+        <p><strong>Số điện thoại:</strong> <?= $rows['sdt'] ?></p>
+
+
+        <?php
+        $conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+        $sql = "SELECT * FROM user where username='$username'";
+        $result = mysqli_query($conn, $sql);
+        $rows = mysqli_fetch_array($result);
+
+        ?>
+        <a href="editprofile.php?user_id=<?= $rows['user_id'] ?>"
+            style="text-decoration: none; padding: 10px 15px; border-radius:5px;color:#000;background-color:#fff; margin-top:20px;border:2px solid #000">Chỉnh
+            sửa
+            thông tin </a>
     </div>
-
-
-    <script src="script.js"></script>
+    <!-- ... -->
 </body>
+
 </html>
