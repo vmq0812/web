@@ -1,4 +1,8 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+
+
+
+?>
 
 <div class="slider-container">
     <div class="slider-content">
@@ -7,10 +11,10 @@
         </div>
         <div class="call-to-action">
             <div class="call-to-action-content">
-                <h1>THAM GIA CỘNG ĐỒNG CỦA CHÚNG TÔI</h1><br>
-                <p>Tại đây chúng tôi cung cấp kiến thức, cách chăm sóc và nuôi dưỡng mèo. </p>
-                <p>Hãy gia nhập với chúng tôi, trở thành thanh viên và chia sẻ kiến thức của bạn cũng như tìm hiểu thêm những điều mới mẻ ngay nhé !!!</p>
-                <a href="signup.php" class="register-button">Đăng ký ngay</a>
+                <h1>CHIA SẺ CHO CỘNG NHỮNG GÌ BẠN BIẾT!</h1><br>
+                <p>Với mục đích xây dựng cộng đồng những người yêu mèo </p>
+                <p>Hãy chia sẻ cho chúng tôi những kiến thức mà bạn có, cũng như học hỏi thêm những điều mới mẻ ngay nhé</p>
+                <a href="post.php" class="register-button">Tạo bài viết </a>
             </div>
         </div>
     </div>
@@ -40,6 +44,7 @@
         <h1>Bài viết nổi bật</h1>
     </div>
     <div class="news-section">
+
         <div class="news-article">
             <img src="https://via.placeholder.com/150" alt="Image placeholder">
             <h2>Tiêu đề bài viết 1</h2>
@@ -71,6 +76,7 @@
         <h1 class="ft">#HASTAG1</h1>
     </div>
     <div class="news-section">
+
         <div class="news-article">
             <img src="https://via.placeholder.com/150" alt="Image placeholder">
             <h2>Tiêu đề bài viết 1</h2>
@@ -79,6 +85,7 @@
             <p>Thời gian</p>
             <a href="#">Đọc thêm</a>
         </div>
+
         <div class="news-article">
             <img src="https://via.placeholder.com/150" alt="Image placeholder">
             <h2>Tiêu đề bài viết 2</h2>
@@ -87,6 +94,7 @@
             <p>Thời gian</p>
             <a href="#">Đọc thêm</a>
         </div>
+
         <div class="news-article">
             <img src="https://via.placeholder.com/150" alt="Image placeholder">
             <h2>Tiêu đề bài viết 3</h2>
@@ -95,13 +103,16 @@
             <p>Thời gian:</p>
             <a href="#">Đọc thêm</a>
         </div>
+
     </div>
+
 </div>
 <div class="hastag-news">
     <div class="box">
         <h1 class="ft">#HASTAG2</h1>
     </div>
     <div class="news-section">
+
         <div class="news-article">
             <img src="https://via.placeholder.com/150" alt="Image placeholder">
             <h2>Tiêu đề bài viết 1</h2>
@@ -110,6 +121,7 @@
             <p>Thời gian</p>
             <a href="#">Đọc thêm</a>
         </div>
+
         <div class="news-article">
             <img src="https://via.placeholder.com/150" alt="Image placeholder">
             <h2>Tiêu đề bài viết 2</h2>
@@ -118,6 +130,7 @@
             <p>Thời gian</p>
             <a href="#">Đọc thêm</a>
         </div>
+
         <div class="news-article">
             <img src="https://via.placeholder.com/150" alt="Image placeholder">
             <h2>Tiêu đề bài viết 3</h2>
@@ -126,6 +139,7 @@
             <p>Thời gian:</p>
             <a href="#">Đọc thêm</a>
         </div>
+
     </div>
 </div>
 <div class="hastag-news">

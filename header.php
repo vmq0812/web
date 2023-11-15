@@ -24,7 +24,7 @@ if (!isset($current_page)) {
             <li><a href="blog.php" <?php if ($current_page === 'blog') echo 'class="active"'; ?>>Bài Viết</a></li>
             <li><a href="message.php"<?php if ($current_page === 'message') echo 'class="active"'; ?>>Tư Vấn</a></li>
             <li><a href="aboutus.php" <?php if ($current_page === 'aboutus') echo 'class="active"'; ?>>Về Chúng Tôi</a></li>
-            <li><a href="userlogin.php">Đăng Nhập</a></li>
+            <li><a href="userprofile.php">Tài Khoản</a></li>
 
         </ul>
     </nav>

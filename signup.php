@@ -1,4 +1,24 @@
-
+<?php
+include('conn.php');
+$tb='';
+if(isset($_POST['dangky'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $sdt = $_POST['sdt'];
+    $sqlkt = "SELECT*FROM user WHERE Username='$username'";
+    $kqkt = kq($sqlkt);
+    $count = count($kqkt);
+    if($count > 0) {
+        $tb = '<span style="color:red">Tên đăng nhập đã tồn tại</span>';
+    } else {
+        $sql = "INSERT INTO user(Username,Password,Fullname,Email,sdt) VALUES('$username','$password','$fullname','$email','$sdt')";
+        ex($sql);
+        $tb = '<span style="color:green">Đăng kí thành công</span>';
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +37,8 @@
     <main>
         <div class="login-container">
             <h2>Đăng Ký</h2>
-            <form id="signup-form" action="signup.php" method="POST">
+            <form id="signup-form" action="" method="POST">
+            <?php echo $tb; ?>
                 <fieldset>
                 <legend>Thông tin tài khoản</legend>
                     <div class="field">
@@ -37,27 +58,35 @@
                     <legend>Thông tin cá nhân</legend>
                         <div class="field">
                             <label for="fullname">Họ tên:</label>
-                            <input type="text" placeholder="Nhập họ tên">
+                            <input type="text" name="fullname" placeholder="Nhập họ tên">
                         </div>
                         <div class="field">
                             <label for="email">Email:</label>
-                            <input type="text" placeholder="Nhập email">
+                            <input type="text" name="email" placeholder="Nhập email">
                         </div>
                         <div class="field">
                             <label for="sdt">SĐT:</label>
-                            <input type="text" placeholder="Nhập SĐT">
-                        </div>
-                        <div class="field">
-                            <label for="img">Ảnh đại diện</label>
-                            <input type="file">
+                            <input type="text" name ="sdt"placeholder="Nhập SĐT">
                         </div>
                 </fieldset>
-                <button type="submit">Đăng Ký</button>
+                <button type="submit" onclick="return kt()" name ="dangky">Đăng Ký</button>
             </form>
         <p>Đã có tài khoản? <a href="userlogin.php">Đăng Nhập</a></p>
-        <p id="error-message" style="color: red;"></p>
         </div>
     </main>
-    <script src="scripts.js"></script>
+    <script>
+        function kt(){
+            var mk=document.getElementById('password').value;
+            var rmk=document.getElementById('confirm_password').value;
+            console.log(mk+rmk);
+            if(mk==rmk){
+            return true;
+            
+            }else{
+            alert('xác nhận mật khẩu không trùng khớp');
+            return false;
+            }
+        }
+    </script>
 </body>
 </html>
