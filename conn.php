@@ -2,8 +2,8 @@
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $host = 'localhost';
 $user = 'root';
-$pass = '123';
-$db = 'typeorm-nestjs';
+$pass = '';
+$db = 'w_data';
 function ex($sql)
 {
     mysqli_query($conn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['pass'], $GLOBALS['db']), $sql);

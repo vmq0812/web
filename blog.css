@@ -108,3 +108,30 @@ h3 {
   margin-right: 80px;
   margin-bottom: 20px;
 }
+.new-con {
+  margin-top: 70px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between; /* Cách hiển thị giữa các phần tử */
+  align-items: center; /* Cách căn giữa theo chiều dọc */
+}
+
+.one-line {
+  display: flex;
+  align-items: center;
+}
+
+.hashtag{
+  margin-left: 10px;
+}
+
+.hastag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.ht {
+  margin-left: 10px; }

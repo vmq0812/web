@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+$conn = mysqli_connect("localhost", "root", "", "w_data");
 ?>
 
 <?php

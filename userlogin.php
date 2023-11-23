@@ -9,7 +9,9 @@ if (isset($_POST['dangnhap'])) {
   $cout = count($kqkt);
   if ($cout > 0) {
     session_start();
+
     $_SESSION['username'] = $username;
+    $_SESSION['user_id'] = $kqkt[0]['user_id'];
     // $_SESSION['per'] = $per;
     $per = $kqkt[0]['per'];
     if ($per == '0') {

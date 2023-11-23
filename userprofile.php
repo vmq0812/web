@@ -1,7 +1,8 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
 
-session_start();
+$conn = mysqli_connect("localhost", "root", "", "w_data");
+
+    session_start();
 
 // Kiểm tra xem người dùng đã đăng nhập chưa
 if (!isset($_SESSION['username'])) {
@@ -12,7 +13,7 @@ if (!isset($_SESSION['username'])) {
 // Lấy thông tin người dùng từ session
 $username = $_SESSION['username'];
 
-$per = $_SESSION['per'];
+// $per = $_SESSION['per'];
 
 
 if (isset($_GET['user_id'])) {
@@ -37,6 +38,13 @@ $rows = mysqli_fetch_array($result);
 
 </head>
 
+<header>
+        <div class="logo">
+            <img src="image/paw.png" alt="hội yêu mèo logo">
+            <h1>MeowWisdom</h1>
+        </div>
+    </header>
+
 <body>
     <!-- ... -->
 
@@ -46,7 +54,7 @@ $rows = mysqli_fetch_array($result);
 
         <h2>Tài khoản cá nhân</h2>
         <div class="avatar-container">
-            <img id="avatar" src="https://via.placeholder.com/150" alt="avatar">
+            <img id="avatar" src="image/pet.png" alt="avatar">
         </div>
         <p><strong>Họ tên:</strong> <?= $rows['Fullname'] ?></p>
         <p><strong>Tên đăng nhập:</strong> <?php echo $username; ?></p>
@@ -56,7 +64,7 @@ $rows = mysqli_fetch_array($result);
 
 
         <?php
-        $conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+        $conn = mysqli_connect("localhost", "root", "", "w_data");
         $sql = "SELECT * FROM user where username='$username'";
         $result = mysqli_query($conn, $sql);
         $rows = mysqli_fetch_array($result);
@@ -67,6 +75,9 @@ $rows = mysqli_fetch_array($result);
             sửa
             thông tin </a>
     </div>
+    <form action="logout.php" method="post">
+        <input type="submit" name="logout" value="Đăng Xuất" style="margin-left: 410px">
+    </form>
     <!-- ... -->
 </body>
 

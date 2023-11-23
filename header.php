@@ -5,7 +5,7 @@ if (!isset($current_page)) {
 ?>
 
 <?php
-$conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+$conn = mysqli_connect("localhost", "root", "", "w_data");
 
 session_start();
 
@@ -18,10 +18,11 @@ if (!isset($_SESSION['username'])) {
 // Lấy thông tin người dùng từ session
 $username = $_SESSION['username'];
 
-$per = $_SESSION['per'];
+// $per = $_SESSION['per'];
 
 
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -45,7 +46,7 @@ $per = $_SESSION['per'];
             <ul>
 
                 <?php
-                $conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+                $conn = mysqli_connect("localhost", "root", "", "w_data");
                 $sql = "SELECT * FROM user where username='$username'";
                 $result = mysqli_query($conn, $sql);
                 $rows = mysqli_fetch_array($result);

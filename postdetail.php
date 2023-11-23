@@ -2,7 +2,7 @@
 $current_page = 'blog';
 include 'header.php';
 
-$conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+$conn = mysqli_connect("localhost", "root", "", "w_data");
 
 if (isset($_GET['post_id'])) {
     $post_id = $_GET['post_id'];
@@ -23,26 +23,106 @@ $rows = mysqli_fetch_array($result);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vietnam - 12 days adventure</title>
-    <link rel="stylesheet" href="postdetail.css">
-    <link rel="stylesheet" href="postdetail-main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>postdetail
+    </title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+  
+
+  --fontText: 'Merriweather', serif;
+  --fontUI: 'Arial', sans-serif;
+
+  --transitionDuration: 0.4s;
+  --transitionEasing: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  --spacing: 3rem;
+  --titleFontSize: 5rem;
+  --subtitleFontSize: 2rem;
+}
+
+@media (min-width: 48em) {
+  :root {
+    --spacing: 3.6rem;
+    --titleFontSize: 7rem;
+    --subtitleFontSize: 2.2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  :root {
+    --spacing: 6.8rem;
+    --titleFontSize: 10rem;
+    --subtitleFontSize: 2.4rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+.title {
+  margin-left: 40px;
+  margin-top: 0.96em;
+  margin-bottom: 0.1em;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.15;
+  letter-spacing: 0.002em;
+}
+
+.author,
+.author a {
+  color: var(--neutral);
+}
+
+.author {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-family: var(--fontUI);
+  font-size: 25px;
+}
+
+.author a {
+  text-underline-position: under;
+}
+
+.subtitle {
+  margin-top: 20px;
+  margin-left: 40px;
+text-align: justify;
+  max-width: 1000px;
+  font-size: 22px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.text {
+  font-size: 22px;
+  line-height: 1.75;
+  margin-top: 1em;
+  letter-spacing: 0.015em;
+}
+.detail-tour__img{
+  margin-top: 20px;
+  margin-left: 40px;
+
+}
+
+
+
+
+    </style>    
+       
 </head>
 
 <body>
-    <div class="toast-mess toast-mess--error slide-in-right grid__row disable">
-        <i class="fa-solid" id="icon"></i>
-        <div class="toast-mess__text">
-            <h3></h3>
-            <span></span>
-        </div>
-        <i class="fa-solid fa-xmark" id="close-modal"></i>
-    </div>
+
 
     <!-- Header -->
 
@@ -50,49 +130,34 @@ $rows = mysqli_fetch_array($result);
     <!-- End of Header -->
 
     <!-- Body -->
-    <div class="container__wrap container">
 
+
+    <!-- #region 
+  -->     
+  <div class="title">
+            <h1><?= $rows['title'] ?></h1>
+        </div>
+
+        <div class="author" style="display:inline;">
+            <div class="author">
+                <span>Tác giả:</span>
+                    <p><?= $rows['author'] ?></p>
+            </div>
+            <div class="author">
+                <p><?= $rows['hashtag'] ?></p>
+            </div>
+        </div>
 
         <div class="detail-tour__hero grid__row">
-
             <div class="detail-tour__img">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="img swiper-slide">
-                            <img style="align-items: center; margin-right: 100px;" class="img"
-                                src="<?= $rows['thumnail'] ?>" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-button-prev swiper-button"></div>
-                    <div class="swiper-button-next swiper-button"></div>
-                </div>
+                <img class="img" src="<?= $rows['thumnail'] ?>" alt="">
             </div>
-
-            <div class="detail-tour__description">
-                <h1><?= $rows['title'] ?></h1>
-
-                <div class="detail__tour-other grid__row">
-
-
-                    <div class="detail__tour-remain">
-                        <span>Tác giả</span>
-                        <p><?= $rows['author'] ?></p>
-                    </div>
-
-
-                    <div class="detail__tour-age">
-                        <span>Hashtag</span>
-                        <p><?= $rows['hashtag'] ?></p>
-                    </div>
-                    <div class="detail__tour-itinerary">
-                        <span>Itinerary:</span>
-                        <p><?= $rows['content'] ?></p>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
+
+      
+        <div class="subtitle">
+            <p><?= $rows['content'] ?></p>
+        </div>
 
     <!-- End of Body -->
 

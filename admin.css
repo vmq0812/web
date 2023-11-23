@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    display: flex;
+}
+
+/* Các đoạn mã CSS hiện tại */
+
+/* Thêm các điều chỉnh cho sidebar trong admin.css hoặc styles.css */
+.sidebar {
+    background-color: #fff;
+    color: #000;
+    height: 100vh;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-pills .nav-link {
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-pills .nav-link i {
+    margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+.sidebar__logout {
+    margin-top: auto;
+    color: #000;
+}
+
+.sidebar__logout a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar__logout a:hover {
+    color: #fff;
+}
+
+
+
+.header {
+    background-color: #b2c4d6;
+    color: #fff;
+    padding: 15px;
+    text-align: right;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.avatar-box {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* Add your custom styles for different sections as needed */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.user-list {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #adb3b9;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+.highlight-text {
+    color: rgb(238, 127, 238); 
+    font-weight: bold; 
+}

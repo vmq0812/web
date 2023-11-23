@@ -1,10 +1,36 @@
-<?php include 'header.php';
+
+<?php include 'header.php';?>
 
 
+<style>
+   
 
-?>
+    .news-section {
+  margin: 16px 32px;
+  overflow-x: auto;
+    /* display: flex; */
+  align-items: center;
+  scroll-snap-type: x mandatory;
+    }
 
 
+    .news-article {
+        flex: 1 0 30%;
+  aspect-ratio: 1;
+  flex-flow: column nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+    
+
+    @media (max-width: 600px) {
+        .news-article {
+            flex: 1 0 90%;
+        }
+    }
+</style>
 
 <div class="slider-container">
     <div class="slider-content">
@@ -13,7 +39,7 @@
         </div>
         <div class="call-to-action">
             <div class="call-to-action-content">
-                <h1>CHIA SẺ CHO CỘNG NHỮNG GÌ BẠN BIẾT!</h1><br>
+                <h1>CHIA SẺ CHO CỘNG ĐỒNG NHỮNG GÌ BẠN BIẾT!</h1><br>
                 <p>Với mục đích xây dựng cộng đồng những người yêu mèo </p>
                 <p>Hãy chia sẻ cho chúng tôi những kiến thức mà bạn có, cũng như học hỏi thêm những điều mới mẻ ngay nhé
                 </p>
@@ -52,7 +78,7 @@
 <div class="news-section">
 
     <?php
-    $conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+    $conn = mysqli_connect("localhost", "root", "", "w_data");
     $sql = "SELECT * FROM post ";
     $result = mysqli_query($conn, $sql);
 
@@ -70,7 +96,7 @@
         <p>
             <?php
                     $content = $sanpham['content'];
-                    $maxWords = 15;
+                    $maxWords = 20;
 
                     $wordCount = str_word_count($content);
                     $words = explode(' ', $content);
@@ -84,7 +110,7 @@
                     ?>
         </p>
 
-        <p><?= $sanpham['author'] ?></p>
+        <p>Tác giả:  <?= $sanpham['author'] ?></p>
 
         <p><?= $sanpham['post_time'] ?></p>
 
@@ -99,14 +125,14 @@
     ?>
 
 </div>
-<div class="hastag-news">
+<!-- <div class="hastag-news">
     <div class="box">
-        <h1 class="ft">#HASTAG1</h1>
+        <h1 class="ft">#QuanDiem</h1>
     </div>
     <div class="news-section">
 
         <?php
-        $conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+        $conn = mysqli_connect("localhost", "root", "", "w_data");
         $sql = "SELECT * FROM post WHERE hashtag='hashtag1'";
         $result = mysqli_query($conn, $sql);
 
@@ -161,12 +187,12 @@
 </div>
 <div class="hastag-news">
     <div class="box">
-        <h1 class="ft">#HASTAG2</h1>
+        <h1 class="ft">#ThuVi</h1>
     </div>
     <div class="news-section">
 
         <?php
-        $conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+        $conn = mysqli_connect("localhost", "root", "", "w_data");
         $sql = "SELECT * FROM post WHERE hashtag='hashtag2'";
         $result = mysqli_query($conn, $sql);
 
@@ -220,11 +246,11 @@
 </div>
 <div class="hastag-news">
     <div class="box">
-        <h1 class="ft">#HASTAG3</h1>
+        <h1 class="ft">#ChiaSe</h1>
     </div>
     <div class="news-section">
         <?php
-        $conn = mysqli_connect("localhost", "root", "123", "typeorm-nestjs");
+        $conn = mysqli_connect("localhost", "root", "", "w_data");
         $sql = "SELECT * FROM post WHERE hashtag='hashtag3'";
         $result = mysqli_query($conn, $sql);
 
@@ -274,10 +300,7 @@
         }
         ?>
     </div>
-</div>
+</div> -->
 
-<main>
-
-</main>
 
 <?php include 'footer.php'; ?>
